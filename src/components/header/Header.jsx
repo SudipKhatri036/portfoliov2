@@ -7,7 +7,7 @@ import { FaSquarePhone } from "react-icons/fa6";
 
 import "./Header.css";
 
-function Header() {
+function Header({ setIsDarkMode, isDarkMode }) {
   return (
     <header className="header">
       <div className="logo">
@@ -38,9 +38,12 @@ function Header() {
           </li>
 
           <li>
-            <a href="#" className="nav__links">
-              <AiFillSun />
-            </a>
+            <button
+              className="nav__links"
+              onClick={() => setIsDarkMode(!isDarkMode)}
+            >
+              {isDarkMode ? <AiFillSun /> : <AiFillMoon />}
+            </button>
           </li>
         </ul>
       </nav>

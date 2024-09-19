@@ -42,6 +42,12 @@
   color: #4b6a9b;
   transition: all 0.3s ease;
 }
+
+button.nav__links {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .app.dark .nav__links {
   color: var(--color-white);
 }
