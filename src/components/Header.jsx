@@ -5,7 +5,6 @@ import { AiFillMoon } from "react-icons/ai";
 import { BsClipboardCheckFill, BsTools } from "react-icons/bs";
 import { FaSquarePhone } from "react-icons/fa6";
 
-import "./Header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 
 function Header({ setIsDarkMode, isDarkMode }) {
