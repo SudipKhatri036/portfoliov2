@@ -1,4 +1,3 @@
-import "./Home.css";
 import { FaArrowRight } from "react-icons/fa";
 
 function Home() {
