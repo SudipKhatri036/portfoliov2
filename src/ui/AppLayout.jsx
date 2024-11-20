@@ -12,7 +12,7 @@ function AppLayout() {
   return (
     <div className={`app${isDarkMode ? " dark" : ""}`}>
       <Header setIsDarkMode={setIsDarkMode} isDarkMode={isDarkMode} />
-      <main className="main">
+      <main className="main container">
         <Outlet />
       </main>
     </div>
