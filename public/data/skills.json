@@ -11,10 +11,10 @@
     "img": "/images/skills/styled-comp.png"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Sass",
     "img": "/images/skills/sass.png"
   },
-  { "id": 8, "title": "Redux", "img": "/images/skills/redux.png" },
-  { "id": 9, "title": "React Query", "img": "/images/skills/rtk-query.svg" }
+  { "id": 9, "title": "Redux", "img": "/images/skills/redux.png" },
+  { "id": 10, "title": "React Query", "img": "/images/skills/rtk-query.svg" }
 ]

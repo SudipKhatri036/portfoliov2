@@ -80,19 +80,30 @@ img {
 
 .main {
   width: 100%;
-  height: calc(100vh - 90px);
-  padding: 3rem;
+
+  padding: 0rem 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    padding: 1.5rem;
+    height: 100%;
+  }
 }
 
 /* Header Section */
 .header {
+  background-color: #fff;
+  transition: var(--transition);
+}
+
+.app.dark .header {
   background: rgba(83, 155, 244, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   color: black;
-  transition: var(--transition);
 }
 
 .header-wrapper {
@@ -159,9 +170,9 @@ button.nav__links {
   transform: scale(1.2);
 }
 
-@media only screen and (max-width: 375px) {
-  .header {
-    padding: 1rem;
+@media only screen and (max-width: 430px) {
+  .header-wrapper {
+    padding: 0 1rem;
   }
 
   .nav__lists {
@@ -178,7 +189,8 @@ button.nav__links {
 /* Home Section */
 
 .hero {
-  height: 100%;
+  height: calc(100vh - 90px);
+  padding-block: 3rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -307,7 +319,6 @@ button.nav__links {
   .hero {
     padding: 1rem 2rem;
     width: 100%;
-    height: auto;
     flex-direction: column;
     gap: 1rem;
   }
@@ -335,15 +346,6 @@ button.nav__links {
     padding: 0;
   }
 
-  .hero__img-cont::before,
-  .hero__img-cont::after {
-    border-radius: 0px;
-  }
-
-  .hero__img-cont img {
-    border-radius: 0px;
-  }
-
   .hero__content-cont {
     padding: 0 1rem;
   }
@@ -357,7 +359,7 @@ button.nav__links {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 430px) {
   .hero__img-cont {
     height: 250px;
   }
@@ -380,6 +382,7 @@ button.nav__links {
 /* Skills Section  */
 
 .skills {
+  height: calc(100vh - 90px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
@@ -451,3 +454,451 @@ button.nav__links {
 }
 
 /* Skills Section  */
+
+/* Loader Style */
+
+/* From Uiverse.io by Nawsome */
+.svg-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-frame svg {
+  position: absolute;
+  transition: 0.5s;
+  z-index: calc(1 - (0.2 * var(--j)));
+  transform-origin: center;
+  width: 344px;
+  height: 344px;
+  fill: none;
+}
+
+.svg-frame:hover svg {
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i)))
+    translateY(calc(-35px * var(--i)));
+}
+
+.svg-frame svg #center {
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.svg-frame:hover svg #center {
+  transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+
+#out2 {
+  animation: rotate16 7s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#out3 {
+  animation: rotate16 3s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #ff0;
+}
+
+#inner3,
+#inner1 {
+  animation: rotate16 4s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#center1 {
+  fill: #ff0;
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes rotate16 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loader Style */
+
+/* Project Styling */
+
+.projects {
+  height: calc(100vh - 90px);
+  padding-top: 1rem;
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Project Card Styling */
+/* From Uiverse.io by gharsh11032000 */
+.card-container {
+  max-width: 400px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.card .front-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card .front-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  background: linear-gradient(-45deg, #95c5fc 0%, var(--color-primary) 100%);
+  color: #e8e8e8;
+  padding: 20px;
+  line-height: 1.5;
+  border-radius: 5px;
+  pointer-events: none;
+  transform: translateX(-96%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  font-family: var(--font-mont);
+}
+
+.card .content .heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card:hover .content {
+  transform: translateY(0);
+}
+
+.card:hover .front-content {
+  transform: translateX(-30%);
+}
+
+.card:hover .front-content p {
+  opacity: 0;
+}
+
+/* Project Card Styling */
+/* Pagination Styling  */
+.pagination {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination .page-link {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  padding: 0;
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  border-radius: 2px !important;
+  border: 1px solid #e4e4e4;
+  color: #4c4c4c;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.page-item.disabled .page-link {
+  color: #fff;
+  background-color: gray;
+  pointer-events: none;
+  border-color: #dee2e6;
+}
+
+.pagination li + li {
+  margin-left: 10px;
+}
+
+.pagination .page-link.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.pagination .page-link:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.page-indx {
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-family: var(--font-mont);
+}
+
+.app.dark .page-indx {
+  color: #fff;
+}
+
+.page-indx span {
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+/* Pagination Styling  */
+@media only screen and (max-width: 1150px) {
+  .projects {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projects-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Project Styling */
+
+/* Contact Styling */
+.contact-form-wrapper {
+  height: calc(100vh - 90px);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  font-family: var(--font-mont);
+}
+
+.contact-form-content1 h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+.contact-form-content1 p {
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+}
+
+.app.dark .contact-form-content1 p {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.email-card-wrapper {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+  color: var(--color-fontmain);
+  border-radius: 8px;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.app.dark .email-card-wrapper {
+  background-color: #1f2937;
+  color: white;
+}
+
+.email-card__icon {
+  font-size: 2rem;
+  padding: 1rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3392ff;
+  border-radius: 50%;
+  color: white;
+}
+
+.email-card-wrapper a {
+  color: var(--color-fontmain);
+  text-decoration: none;
+}
+
+.app.dark .email-card-wrapper a {
+  color: white;
+  font-weight: 500;
+}
+
+.email-card-wrapper a span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.email-card-wrapper a span:hover {
+  color: var(--color-primary);
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 3rem;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.app.dark .contact-form {
+  background-color: #1f2937;
+}
+
+.contact-form h2 {
+  text-transform: capitalize;
+  letter-spacing: 0.9px;
+}
+
+.contact-form form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-family: var(--font-mont);
+  font-weight: 500;
+  padding-inline: 1rem;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: var(--color-bglight);
+}
+
+.app.dark .contact-form input {
+  background-color: #374151;
+  color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form input:focus-visible {
+  border: 1px solid var(--color-primary);
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-weight: 500;
+  font-family: var(--font-mont);
+  border: 1px solid transparent;
+  outline: none;
+  background-color: var(--color-bglight);
+}
+
+.app.dark .contact-form textarea {
+  background-color: #374151;
+  color: #fff;
+}
+
+.contact-form textarea:focus,
+.contact-form textarea:focus-visible {
+  border: 1px solid var(--color-primary);
+}
+.contact-form button {
+  background-color: var(--color-primary);
+  padding: 1rem;
+  width: 30%;
+  border: none;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.75px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+}
+
+.contact-form button:hover,
+.contact-form button:focus-visible {
+  background-color: #0061cc;
+}
+
+@media only screen and (max-width: 1140px) {
+  .contact-form-wrapper {
+    padding-block: 2rem;
+    height: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-content1 {
+    text-align: center;
+  }
+
+  .email-card-wrapper {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .email-card-wrapper {
+    width: 70%;
+  }
+
+  .contact-form-content1 h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .contact-form {
+    padding: 3rem 1.5rem;
+  }
+  .email-card-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .email-card-wrapper {
+    width: 90%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
+/* Contact Styling */

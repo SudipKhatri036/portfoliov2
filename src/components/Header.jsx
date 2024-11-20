@@ -43,7 +43,7 @@ function Header({ setIsDarkMode, isDarkMode }) {
             </li>
             <li>
               <a
-                href="/Sudip-Khatri-Resume.pdf"
+                href="/sudip-khatri-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav__links"

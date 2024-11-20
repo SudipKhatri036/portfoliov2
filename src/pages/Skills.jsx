@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Loader from "../components/Loader";
 
 function Skills() {
   const [skills, setSkills] = useState([]);
@@ -33,7 +34,8 @@ function Skills() {
 
   return (
     <section className="skills container">
-      {isLoading && <p>Loading....</p>}
+      {isLoading && <Loader />}
+      {error && <p>Something Went Wrong! {error}</p>}
       {skills?.map((skill) => {
         return (
           <div className="skill-wrapper" key={skill.id}>

@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
 import Header from "../components/Header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function AppLayout() {
   const [isDarkMode, setIsDarkMode] = useState(function () {
@@ -15,6 +17,7 @@ function AppLayout() {
       <main className="main container">
         <Outlet />
       </main>
+      <ToastContainer />
     </div>
   );
 }

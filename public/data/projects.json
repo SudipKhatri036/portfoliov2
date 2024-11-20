@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "MR Holding",
+    "siteLink": "https://mountroyal.netlify.app/",
+    "technologies": "React, React-router, Framer motion",
+    "siteImg": "/images/projects/mount-royal.png"
+  },
+  {
+    "id": 2,
+    "title": "Nectar Digit v2",
+    "siteLink": "https://nectarfrontendv2.netlify.app/",
+    "technologies": "React, React-router, Toastify, Bootstrap, Swiper js",
+    "siteImg": "/images/projects/nectar-project.png"
+  },
+  {
+    "id": 3,
+    "title": "Roadsewa",
+    "siteLink": "https://roadsewa.com/",
+    "technologies": "React, Toastify, Bootstrap, Slick Slider",
+    "siteImg": "/images/projects/roadsewa.png"
+  },
+  {
+    "id": 4,
+    "title": "Ecommerce product Page",
+    "siteLink": "https://ecommerceproductpagefrontend.netlify.app/",
+    "technologies": "React, Toastify, Css Modules",
+    "siteImg": "/images/projects/product-page-ecom.png"
+  },
+  {
+    "id": 5,
+    "title": "Product list with cart",
+    "siteLink": "https://projectlistwithcart.netlify.app/",
+    "technologies": "HTML, CSS, JavaScript, Fetch",
+    "siteImg": "/images/projects/productlist-with-cart.png"
+  },
+  {
+    "id": 6,
+    "title": "Job Listing",
+    "siteLink": "https://joblistingfrontend.netlify.app/",
+    "technologies": " HTML, CSS, JavaScript, Fetch",
+    "siteImg": "/images/projects/joblisting.png"
+  },
+  {
+    "id": 7,
+    "title": "Crud Profile App",
+    "siteLink": "https://crudprofileapp.netlify.app/",
+    "technologies": "React, Formik, Yup Validation, React-router, Toastify",
+    "siteImg": "/images/projects/crudprofile.png"
+  },
+  {
+    "id": 8,
+    "title": "Multi Step Form",
+    "siteLink": "https://devchallengmultistepform.netlify.app/",
+    "technologies": "React, Formik, Yup Validation, React-router, Toastify",
+    "siteImg": "/images/projects/multipageform.png"
+  },
+  {
+    "id": 8,
+    "title": "Tip Calculator App",
+    "siteLink": "https://frontendmentortipcalculatorapp.netlify.app/",
+    "technologies": "HTML, CSS, JavaScript",
+    "siteImg": "/images/projects/tip-calc.png"
+  }
+]
