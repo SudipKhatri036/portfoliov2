@@ -13,10 +13,6 @@ function Header({ setIsDarkMode, isDarkMode }) {
   return (
     <header className="header">
       <div className="header-wrapper container">
-        <div className="logo" onClick={() => navigate("/")}>
-          Sudip <span className="logo__special">Khatri</span>
-        </div>
-
         <nav className="nav">
           <ul className="nav__lists">
             <li>

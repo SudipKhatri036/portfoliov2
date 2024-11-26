@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SocialLinks from "../components/SocialLinks";
 
 function AppLayout() {
   const [isDarkMode, setIsDarkMode] = useState(function () {
@@ -17,6 +18,7 @@ function AppLayout() {
       <main className="main container">
         <Outlet />
       </main>
+      <SocialLinks />
       <ToastContainer />
     </div>
   );
