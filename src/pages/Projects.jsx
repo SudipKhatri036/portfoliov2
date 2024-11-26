@@ -23,8 +23,6 @@ function Projects() {
 
         setProjects(data);
       } catch (error) {
-        console.log("🚀 ~ getProjects ~ error:", error);
-
         setError(error.message);
       } finally {
         setIsLoading(false);
@@ -52,11 +50,11 @@ function Projects() {
     <section className="container projects">
       <div className="projects-wrapper">
         {isLoading && <Loader />}
-        {error && <p>Something Went Wrong! {error}</p>}
+        {error && <p className="error">Something Went Wrong! {error}</p>}
         {projects
           ?.slice(6 * (currentPage - 1), currentPage > 1 ? 6 * currentPage : 6)
           .map((project) => {
-            return <ProjectCard project={project} />;
+            return <ProjectCard key={project.id} project={project} />;
           })}
       </div>
       {maxPage > 1 && (

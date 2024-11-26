@@ -85,6 +85,12 @@ img {
   padding: 0rem 3rem;
 }
 
+.error {
+  font-size: 2rem;
+  color: tomato;
+  font-family: var(--font-mont);
+}
+
 @media only screen and (max-width: 768px) {
   .main {
     padding: 1.5rem;

@@ -17,12 +17,9 @@ function Skills() {
         }
 
         const data = await resp.json();
-        console.log("🚀 ~ getSkills ~ data:", data);
 
         setSkills(data);
       } catch (error) {
-        console.log("🚀 ~ getSkills ~ error:", error);
-
         setError(error.message);
       } finally {
         setIsLoading(false);
@@ -35,7 +32,7 @@ function Skills() {
   return (
     <section className="skills container">
       {isLoading && <Loader />}
-      {error && <p>Something Went Wrong! {error}</p>}
+      {error && <p className="error">Uggh! Something Went Wrong! {error}</p>}
       {skills?.map((skill) => {
         return (
           <div className="skill-wrapper" key={skill.id}>
