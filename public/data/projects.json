@@ -16,8 +16,8 @@
   {
     "id": 3,
     "title": "Roadsewa",
-    "siteLink": "https://roadsewa.com/",
-    "technologies": "React, Toastify, Bootstrap, Slick Slider",
+    "siteLink": "https://roadsewavite.netlify.app/",
+    "technologies": "React, Toastify, Slick Slider, Animation",
     "siteImg": "/images/projects/roadsewa.png"
   },
   {
