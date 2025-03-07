@@ -1,11 +1,4 @@
 [
-   {
-    "id": 11,
-    "title": "Entertainment-app",
-    "siteLink": "https://entertainment-app-icrm.vercel.app/",
-    "technologies": "React, React-router, Tenstack Query, React Icons, IMDB Api",
-    "siteImg": "/images/projects/entertainment-app.png"
-  },
   {
     "id": 1,
     "title": "MR Holding",
@@ -19,6 +12,13 @@
     "siteLink": "https://nectarfrontendv2.netlify.app/",
     "technologies": "React, React-router, Toastify, Bootstrap, Swiper js",
     "siteImg": "/images/projects/nectar-project.png"
+  },
+    {
+    "id": 11,
+    "title": "Entertainment-app",
+    "siteLink": "https://entertainment-app-icrm.vercel.app/",
+    "technologies": "React, React-router, Tenstack Query, React Icons, IMDB Api",
+    "siteImg": "/images/projects/entertainment-app.png"
   },
   {
     "id": 3,
