@@ -16,8 +16,8 @@
     {
     "id": 11,
     "title": "Entertainment-app",
-    "siteLink": "https://entertainment-app-icrm.vercel.app/",
-    "technologies": "React, React-router, Tenstack Query, React Icons, IMDB Api",
+    "siteLink": "https://entertainment-app-drab.vercel.app/",
+    "technologies": "React, Nodejs, Mongodb, Express.js ,Tenstack Query, TMDB Api",
     "siteImg": "/images/projects/entertainment-app.png"
   },
   {
